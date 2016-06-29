@@ -27,6 +27,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'joonty/vdebug'
+
 call vundle#end()
 filetype plugin indent on 
 
@@ -37,6 +39,7 @@ set shiftwidth=4 " set > indent to 4
 set expandtab " map tab to 4 spaces
 
 set number " show line numbers
+set relativenumber
 
 set showcmd " show last command at bottom
 
@@ -51,7 +54,6 @@ set hlsearch  " highlight matches
 let g:ctrlp_show_hidden = 0 
 
 
-nnoremap <F2> :nohlsearch<CR>
 
 " map beginning and end of line
 nnoremap B ^
@@ -87,11 +89,19 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
+" clear highlights from search
+nnoremap <leader>ch :nohlsearch<CR>
+
 " open vimrc
 nnoremap <leader>rc :vsp $MYVIMRC<CR>
 
 " save vim session
 nnoremap <leader>s :mksession! ~/mysession.vim<CR>
+
+" grep mappings
+nnoremap <leader>cn :cn<CR>
+nnoremap <leader>cp :cp<CR>
+nnoremap <leader>cl :cl<CR>
 
 " load vim session
 nnoremap <leader>l :source ~/mysession.vim<CR>
@@ -108,4 +118,6 @@ map <leader>g :YcmCompleter GoTo<CR>
 " Lazy mans plugin install
 map <leader>pi :PluginInstall<CR>
 
-
+" relative and absolute numbers
+map <leader>rn :set relativenumber<CR>
+map <leader>an :set relativenumber!<CR>
