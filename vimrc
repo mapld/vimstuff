@@ -5,6 +5,10 @@ colorscheme badwolf
 set nocompatible
 filetype off
 
+source ~/.vim/simplenote.rc
+" let g:SimplenoteUsername = "username"
+" let g:SimplenotePassword = "password"
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -28,6 +32,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'joonty/vdebug'
+
+Plugin 'mrtazz/simplenote.vim'
 
 call vundle#end()
 filetype plugin indent on 
@@ -121,3 +127,10 @@ map <leader>pi :PluginInstall<CR>
 " relative and absolute numbers
 map <leader>rn :set relativenumber<CR>
 map <leader>an :set relativenumber!<CR>
+
+" simplenote
+nnoremap <leader>sn :Simplenote 
+nnoremap <leader>snl :Simplenote -l<CR>
+nnoremap <leader>snd :Simplenote -d<CR>
+nnoremap <leader>snn :Simplenote -n<CR>
+nnoremap <leader>snt :Simplenote -t<CR>
