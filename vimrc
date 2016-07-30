@@ -5,7 +5,7 @@ colorscheme badwolf
 set nocompatible
 filetype off
 
-source ~/.vim/simplenote.rc
+" source ~/.vim/simplenote.rc
 " let g:SimplenoteUsername = "username"
 " let g:SimplenotePassword = "password"
 
@@ -29,7 +29,7 @@ Plugin 'Raimondi/delimitMate'
 
 Plugin 'christoomey/vim-tmux-navigator'
 
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'joonty/vdebug'
 
